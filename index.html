@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GameZone - Modern Game Review Website">
+    <meta name="keywords" content="game, reviews, latest games, gaming blog">
+    <meta name="author" content="Your Name">
+    <title>GameZone - Game Reviews Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #121212;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #121212;
+        }
+        header h1 {
+            font-size: 2.5em;
+            color: rgb(8, 8, 8);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            background-color: rgb(10, 9, 9);
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        nav a:hover {
+            color: #ff4500;
+        }
+        .content-section {
+            display: none;
+            padding: 50px;
+        }
+        .active {
+            display: block;
+        }
+        .reviews-section h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .review {
+            background-color: grey;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .review h4 {
+            font-size: 1.5em;
+            color: #ff4500;
+        }
+        .review p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #1a1a1a;
+            padding: 30px;
+            text-align: center;
+            color: #ffffff;
+        }
+        footer a {
+            color: #ff4500;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .footer-links a {
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>GameZone</h1>
+    <p>Your go-to place for the latest game reviews and news.</p>
+</header>
+
+<nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('reviews')">Reviews</a>
+    <a onclick="showSection('write-review')">Write a Review</a> <!-- New link -->
+    <a onclick="showSection('about')">About Us</a>
+    <a onclick="showSection('contact')">Contact</a>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="content-section active">
+    <h2>Welcome to GameZone</h2>
+    <p>Discover the latest game reviews, news, and everything gaming right here. Stay updated with the most honest reviews from gamers around the world.</p>
+</section>
+
+<!-- Reviews Section -->
+<section id="reviews" class="content-section">
+    <h3>Game Reviews</h3>
+
+</section>
+
+<!-- Write a Review Section -->
+<section id="write-review" class="content-section">
+    <h3>Write a Review</h3>
+    <form id="reviewForm">
+        <label for="username">Your Name:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="game">Game Title:</label><br>
+        <input type="text" id="game" name="game" required><br><br>
+
+        <label for="reviewText">Your Review:</label><br>
+        <textarea id="reviewText" name="reviewText" rows="5" required></textarea><br><br>
+
+        <label for="rating">Rating (out of 10):</label><br>
+        <input type="number" id="rating" name="rating" min="0" max="10" step="0.1" required><br><br>
+
+        <button type="submit">Submit Review</button>
+    </form>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="content-section">
+    <h3>About GameZone</h3>
+    <p>GameZone is a platform dedicated to providing honest and thorough reviews of the latest games. Our community consists of gamers from all over the world who are passionate about sharing their insights on various genres, from indie games to AAA titles. Our goal is to be a trusted source of information for gamers of all types—whether you’re a casual player or a hardcore enthusiast.</p>
+    <p>At GameZone, we focus on more than just ratings. We dive deep into gameplay mechanics, storyline quality, graphics, and much more. Each review is written by experienced gamers who have spent considerable time playing the games they critique. We want to make sure you're fully informed before making your next purchase or diving into a new gaming adventure.</p>
+    <p>Founded in 2024,by Haziq and Muqueet.GameZone is constantly expanding its content to include news articles, developer interviews, and gaming tips. Join us in building a community of informed and passionate gamers.</p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="content-section">
+    <h3>Contact Us</h3>
+    <p>Have questions, suggestions, or want to submit your own reviews? Feel free to reach out to us! We're always excited to hear from fellow gamers. Here’s how you can get in touch:</p>
+    <ul>
+        <li>Email: <a href="mailto:support@gamezone.com">support@gamezone.com</a></li>
+        <li>Twitter: <a href="https://twitter.com/GameZone" target="_blank">@GameZone</a></li>
+        <li>Instagram: <a href="https://instagram.com/GameZone" target="_blank">@GameZone</a></li>
+        <li>Facebook: <a href="https://facebook.com/GameZone" target="_blank">/GameZone</a></li>
+        <li>Discord: Join our community on <a href="https://discord.gg/GameZone" target="_blank">Discord</a></li>
+    </ul>
+    <p>Our team is available 24/7 to help answer any questions or provide feedback on your submitted reviews. We look forward to hearing from you!</p>
+</section>
+
+
+<footer>
+    <div class="footer-links">
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('reviews')">Reviews</a>
+        <a onclick="showSection('about')">About Us</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </div>
+    <p>&copy; 2024 GameZone. All rights reserved.</p>
+</footer>
+
+<script>
+    // Function to show sections
+    function showSection(sectionId) {
+        var sections = document.querySelectorAll('.content-section');
+        sections.forEach(function(section) {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+    }
+
+    // Function to save the review data to localStorage
+    function saveReview() {
+        const username = document.getElementById('username').value;
+        const game = document.getElementById('game').value;
+        const reviewText = document.getElementById('reviewText').value;
+        const rating = document.getElementById('rating').value;
+
+        // Retrieve existing reviews from localStorage or start with an empty array
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+        // Create a new review object
+        const newReview = {
+            username: username,
+            game: game,
+            reviewText: reviewText,
+            rating: rating
+        };
+
+        // Add the new review to the list of reviews
+        reviews.push(newReview);
+
+        // Save the updated list of reviews to localStorage
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+    }
+
+    // Function to load reviews from localStorage and display them
+    function loadReviews() {
+        // Retrieve the reviews from localStorage
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+        // Get the reviews section
+        const reviewsSection = document.getElementById('reviews');
+
+        // Clear existing reviews to avoid duplication
+        reviewsSection.innerHTML = '<h3>Game Reviews</h3>';
+
+        // Loop through the reviews and add them to the section
+        reviews.forEach(function(review) {
+            const reviewDiv = document.createElement('div');
+            reviewDiv.classList.add('review');
+            reviewDiv.innerHTML = `
+                <h4>${review.username} on <i>${review.game}</i></h4>
+                <p>${review.reviewText}</p>
+                <p>Rating: ${review.rating}/10</p>
+            `;
+            reviewsSection.appendChild(reviewDiv);
+        });
+    }
+
+    // Call loadReviews on page load to display existing reviews
+    window.onload = function() {
+        loadReviews();
+    };
+
+    // Handle form submission
+    document.getElementById('reviewForm').onsubmit = function(e) {
+        e.preventDefault(); // Prevent form submission (page reload)
+
+        // Save the review to localStorage
+        saveReview();
+
+        // Reload the reviews section to display the new review
+        loadReviews();
+
+        // Clear the form
+        document.getElementById('reviewForm').reset();
+
+        // Optionally, navigate to the reviews section
+        showSection('reviews');
+    };
+</script>
+
+
+</body>
+</html>
+
